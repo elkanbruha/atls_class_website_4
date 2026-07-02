@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+
+/* form styling */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #222;
+}
+
+#wrapper {
+	width: 60%;
+	margin-left:4%;
+}
+
+div#formcol1 {
+	float:left;
+	width: 100%;
+}
+
+h1 {
+	font-size: 1.6em;
+	color: #333;
+}
+
+/* instructions at the top of the form */
+.instructions {
+	font-size: .95em;
+	max-width: 34em;
+}
+
+/* asterisk marking required fields */
+.req {
+	color: #B00020;   /* dark red - 6.6:1 contrast on white */
+	font-weight: bold;
+}
+
+/* group borders and headings */
+fieldset {
+	border: 1px solid #999;
+	border-radius: 4px;
+	margin-bottom: 1.2em;
+	padding: .8em 1em;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 1.15em;
+	color: #333;
+	padding: 0 .4em;
+}
+
+/* labels: fixed width so the input fields line up,
+   right-aligned so each label sits just before its field.
+   Scoped to #formcol1 so the radio-button labels at the
+   bottom of the form are NOT given a width/right alignment
+   (that was the styling problem the width caused). */
+#formcol1 label {
+	margin-right: .3em;
+	width: 7em;
+	display: inline-block; /* width will not work for inline elements such as label */
+	text-align: right;
+}
+
+/* we place the id formcol1 in front of the li element in order
+   to limit this formatting to the top part of the form */
+#formcol1 li {
+	list-style: none;
+	margin-bottom: .5em;
+}
+
+#formcol1 ul {
+	padding-left: 0;
+}
+
+/* radio buttons: keep each input close to its own label,
+   with a little space between the two choices */
+#multchoice label {
+	margin-right: 1.5em;
+}
+
+/* highlight current keyboard and mouse focus */
+select:focus, select:active, input:focus, input:active,
+input:focus + label, input:active + label,
+label[for]:focus, label[for]:active {
+	color: #FFF !important;
+	background-color: #BB3D2F !important;
+}
+
+/* color cue (in addition to asterisk) for required fields */
+#formcol1 input.reqfield {
+	background:#FF9;
+}
+
+.submit-button input {
+	padding: .4em 1em;
+	font-size: 1em;
+}
+
+/* end of form css */
